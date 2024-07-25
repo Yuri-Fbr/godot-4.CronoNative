@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo08c4wvp1njf"]
+
+[ext_resource type="Script" path="res://scripts/estudo.gd" id="1_xvip7"]
+
+[node name="estudo" type="Node2D"]
+script = ExtResource("1_xvip7")
