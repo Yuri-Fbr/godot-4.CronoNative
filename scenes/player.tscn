@@ -247,11 +247,11 @@ position = Vector2(5, 7)
 script = ExtResource("1_t1i34")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -1.5)
+position = Vector2(-5, -8.5)
 shape = SubResource("RectangleShape2D_1xumr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.5, -7)
+position = Vector2(-5, -14)
 texture = ExtResource("2_f7o5t")
 flip_h = true
 hframes = 4
