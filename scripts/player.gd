@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var animations = $AnimationPlayer
 @export_category("Objects")
 
+@export var Inventory: Inventory
 
 #movimentação
 func _handleInput():
@@ -26,5 +27,6 @@ func _physics_process(_delta):
 	_updateAnimation()
 	move_and_slide()
 	#dialogo
+
 
 

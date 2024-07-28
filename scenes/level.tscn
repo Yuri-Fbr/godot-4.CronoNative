@@ -1135,11 +1135,9 @@ layer_4/tile_data = PackedInt32Array(524264, 1638404, 1, 524265, 1703940, 1, 589
 position = Vector2(-888, 245)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("5_ya31e")
 
 [node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("5_j4ikf")]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
