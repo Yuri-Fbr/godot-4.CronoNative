@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://whrhiywnfvo1"]
+
+[ext_resource type="Texture2D" uid="uid://6jlxpf88b4xd" path="res://assets/sprites/characters/fantasma.png" id="1_o4n8k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lndnq"]
+atlas = ExtResource("1_o4n8k")
+region = Rect2(10, 0, 79, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gyhnd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lndnq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -12)
+scale = Vector2(0.727848, 0.6875)
+sprite_frames = SubResource("SpriteFrames_gyhnd")
+autoplay = "default"
+frame_progress = 0.403999
