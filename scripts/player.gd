@@ -5,6 +5,9 @@ extends CharacterBody2D
 
 @export var Inventory: Inventory
 
+var heart : int = 4
+var contato = false
+
 #movimentação
 func _handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down" )
@@ -27,6 +30,21 @@ func _physics_process(_delta):
 	_updateAnimation()
 	move_and_slide()
 	#dialogo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 
 
 

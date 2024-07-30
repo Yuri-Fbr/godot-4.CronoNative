@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://rfbaodfquobf"]
+[gd_scene load_steps=16 format=3 uid="uid://rfbaodfquobf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_t1i34"]
 [ext_resource type="Resource" uid="uid://bmr7gde08gslk" path="res://invetory/player_inventory.tres" id="2_ab8l6"]
@@ -243,6 +243,9 @@ _data = {
 "WalkUp": SubResource("Animation_iwiwt")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o34r4"]
+size = Vector2(14, 15)
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(5, 7)
 script = ExtResource("1_t1i34")
@@ -270,3 +273,9 @@ libraries = {
 "": SubResource("AnimationLibrary_hc5uv")
 }
 autoplay = "IdleDown"
+
+[node name="Area2D" type="Area2D" parent="AnimationPlayer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimationPlayer/Area2D"]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_o34r4")
