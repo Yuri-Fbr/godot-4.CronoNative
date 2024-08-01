@@ -29,9 +29,14 @@ func _physics_process(_delta):
 	_handleInput()
 	_updateAnimation()
 	move_and_slide()
-	#dialogo
-
-
+	aplly_push_force()
+#força de empurrar o objeto
+func aplly_push_force():
+	for objects in get_slide_collision_count():
+		var colision = get_slide_collision(objects)
+		if colision.get_collider() is Puxaveis:
+			colision.get_collider().slide_objetc(-colision.get_normal())
+		
 
 
 

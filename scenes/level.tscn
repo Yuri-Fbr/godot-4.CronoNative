@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://xlptxahs3m02"]
+[gd_scene load_steps=19 format=3 uid="uid://xlptxahs3m02"]
 
 [ext_resource type="Texture2D" uid="uid://sdmk2jd5ssgn" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Plant.png" id="1_6jij7"]
 [ext_resource type="Texture2D" uid="uid://3q8f71tgo84e" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png" id="1_uc1py"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://h4fssy4uywv7" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Struct.png" id="5_r7g7n"]
 [ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="5_ya31e"]
 [ext_resource type="Texture2D" uid="uid://dt4at8766h7fh" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Props.png" id="6_mc03c"]
+[ext_resource type="PackedScene" uid="uid://ggoa7ah1hr6u" path="res://scenes/baú.tscn" id="11_lg16c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52t5b"]
 texture = ExtResource("1_uc1py")
@@ -1152,3 +1153,6 @@ grow_vertical = 2
 
 [node name="enemy" parent="." instance=ExtResource("5_6iyk8")]
 position = Vector2(-903, 304)
+
+[node name="baú" parent="." instance=ExtResource("11_lg16c")]
+position = Vector2(-335.08, 198.185)

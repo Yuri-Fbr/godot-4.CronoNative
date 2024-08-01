@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ggoa7ah1hr6u"]
+
+[ext_resource type="Script" path="res://scenes/baú.gd" id="1_mubtq"]
+[ext_resource type="Texture2D" uid="uid://bufri3qckk7hs" path="res://assets/sprites/objects/chest_01.png" id="1_st1ko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oybg4"]
+size = Vector2(16, 15)
+
+[node name="baú" type="CharacterBody2D"]
+script = ExtResource("1_mubtq")
+
+[node name="Chest01" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_st1ko")
+region_enabled = true
+region_rect = Rect2(0.313335, -0.280199, 15.6297, 16.0254)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_oybg4")
