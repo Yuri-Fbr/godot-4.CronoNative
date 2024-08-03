@@ -36,20 +36,3 @@ func aplly_push_force():
 		var colision = get_slide_collision(objects)
 		if colision.get_collider() is Puxaveis:
 			colision.get_collider().slide_objetc(-colision.get_normal())
-		
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-

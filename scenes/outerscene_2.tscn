@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvjtv8e1icu3n"]
+
+[sub_resource type="TileSet" id="TileSet_qijod"]
+
+[node name="Node" type="Node2D"]
+
+[node name="Scene_2" type="TileMap" parent="."]
+position = Vector2(-1, -1)
+tile_set = SubResource("TileSet_qijod")
+format = 2

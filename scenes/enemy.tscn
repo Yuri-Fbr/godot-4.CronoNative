@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuudh2llew4th"]
+
+[ext_resource type="PackedScene" uid="uid://dpmm3fyf2txxl" path="res://scenes/slime.tscn" id="1_gguoh"]
+
+[node name="enemy" instance=ExtResource("1_gguoh")]
+
+[node name="detection" parent="Area2D" index="0"]
+position = Vector2(0, 2)
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
