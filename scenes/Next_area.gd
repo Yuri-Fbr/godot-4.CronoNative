@@ -3,7 +3,9 @@ extends Area2D
 var entered = false
 func _on_body_entered(body: CharacterBody2D):
 	entered = true
-
+	if entered == true:
+		_process(delta)
+	
 func _on_body_exited(body):
 	entered = false 
 	
