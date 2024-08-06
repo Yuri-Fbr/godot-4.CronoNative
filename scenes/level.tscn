@@ -1131,12 +1131,12 @@ layer_1/tile_data = PackedInt32Array(1310679, 131072, 6, 1376215, 131072, 7, 144
 layer_2/name = "wall"
 layer_2/tile_data = PackedInt32Array(720864, 1048576, 5, 786400, 1048576, 6, 851936, 1048576, 7, 917472, 1769472, 6, 917467, 131072, 6, 983003, 131072, 7, 1048539, 131072, 8, 917468, 196608, 6, 983004, 196608, 7, 1048540, 196608, 8, 917469, 262144, 6, 983005, 262144, 7, 1048541, 262144, 8, 917470, 327680, 6, 983006, 327680, 7, 1048542, 327680, 8, 917471, 983040, 2, 983007, 983040, 3, 1048543, 983040, 4, 983008, 1769472, 7, 1048544, 1769472, 8, 655328, 1376256, 1, 327648, 1376256, 1, 1245152, 1179648, 2, 1310688, 1179648, 3, 1376224, 1179648, 4, 1441760, 1179648, 5, 1507296, 1179648, 2, 1572832, 1179648, 3, 1638368, 1179648, 4, 1703904, 1179648, 5, 1769440, 1179648, 6, 1834976, 1179648, 7)
 
-[node name="Next_area" type="Area2D" parent="."]
+[node name="Level_2" type="Area2D" parent="."]
 y_sort_enabled = true
 position = Vector2(-1.06496, 11.9944)
 script = ExtResource("7_bk1ot")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Next_area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_2"]
 visible = false
 z_index = 5
 position = Vector2(-563.424, 260.948)
@@ -1169,5 +1169,5 @@ position = Vector2(-903, 304)
 [node name="baú" parent="." instance=ExtResource("11_lg16c")]
 position = Vector2(-670.498, 274.367)
 
-[connection signal="body_entered" from="Next_area" to="Next_area" method="_on_body_entered"]
-[connection signal="body_exited" from="Next_area" to="Next_area" method="_on_body_exited"]
+[connection signal="body_entered" from="Level_2" to="Level_2" method="_on_body_entered"]
+[connection signal="body_exited" from="Level_2" to="Level_2" method="_on_body_exited"]

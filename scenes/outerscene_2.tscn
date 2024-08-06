@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvjtv8e1icu3n"]
+[gd_scene load_steps=4 format=3 uid="uid://dvjtv8e1icu3n"]
+
+[ext_resource type="Script" path="res://scripts/Level_3.gd" id="1_6j3tl"]
 
 [sub_resource type="TileSet" id="TileSet_qijod"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_teq2v"]
 
 [node name="Node" type="Node2D"]
 
@@ -8,3 +12,12 @@
 position = Vector2(-1, -1)
 tile_set = SubResource("TileSet_qijod")
 format = 2
+
+[node name="Level_3" type="Area2D" parent="."]
+script = ExtResource("1_6j3tl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_3"]
+shape = SubResource("RectangleShape2D_teq2v")
+
+[connection signal="body_entered" from="Level_3" to="Level_3" method="_on_body_entered"]
+[connection signal="body_exited" from="Level_3" to="Level_3" method="_on_body_exited"]
