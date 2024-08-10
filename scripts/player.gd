@@ -5,13 +5,14 @@ extends CharacterBody2D
 
 @export var Inventory: Inventory
 
-var heart : int = 4
+var save_file_path = "User://save/"
+
 var contato = false
 
 #movimentação
 func _handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down" )
-	velocity = moveDirection*speed
+	velocity = moveDirection * speed
 	
 func _updateAnimation():
 	var direction = "Down"
@@ -34,5 +35,6 @@ func _physics_process(_delta):
 func aplly_push_force():
 	for objects in get_slide_collision_count():
 		var colision = get_slide_collision(objects)
-		if colision.get_collider() is Puxaveis:
+		if colision.get_collider() is Empurraveis:
 			colision.get_collider().slide_objetc(-colision.get_normal())
+			

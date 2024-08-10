@@ -1,14 +1,15 @@
 extends CharacterBody2D
-class_name Puxaveis
+class_name Empurraveis
 
 const velocidade_de_empurrar = 100.0
-var direction: int 
 func _physics_process(_delta):
 	
 	move_and_slide()
-	velocity.x = 0
+	
 	velocity.y = 0
+	velocity.x = 0
+	
 #funcão para definir a direção	
 func slide_objetc(direction):
-	velocity.x = direction.x * velocidade_de_empurrar
-	velocity.y = direction.y * velocidade_de_empurrar
+	velocity.x = int(direction.x) * velocidade_de_empurrar
+	velocity.y = int(direction.y) * velocidade_de_empurrar
