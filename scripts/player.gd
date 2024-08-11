@@ -5,10 +5,18 @@ extends CharacterBody2D
 
 @export var Inventory: Inventory
 
-var save_file_path = "User://save/"
+var save_file_path = "user://save/"
 
 var contato = false
-
+func _ready():
+	verific_save_directory(save_file_path)
+	
+func verific_save_directory(path: String):
+	DirAccess.make_dir_absolute(path)
+	
+func load_data():
+	PlayerData = ResourceLoader.load(save_file_path).duplicate(true)
+	
 #movimentação
 func _handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down" )
