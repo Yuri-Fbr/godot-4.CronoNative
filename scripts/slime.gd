@@ -1,16 +1,15 @@
 #por tudo que é mais sagrado, não mexa aqui
 extends CharacterBody2D
-var player_on_area: bool = false
+var player_on_area
 
-func _on_area_2d_body_entered(body):
-	player_on_area = true
 	
 func _on_area_2d_body_exited(body):
 	player_on_area = false
-
+	print("fora")
+func _on_area_2d_body_entered(body):
+	player_on_area = true
+	print("dentro")
 func _dialog(event: InputEvent):
-	if Dialogic.current_timeline != null:
-		return
 	if player_on_area == true:
 		_input(event)
 func _input(event: InputEvent):

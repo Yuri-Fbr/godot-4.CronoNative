@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export_category("Objects")
 
 @export var Inventory: Inventory
-
 var save_file_path = "user://save/"
 
 var contato = false
@@ -15,7 +14,8 @@ func verific_save_directory(path: String):
 	DirAccess.make_dir_absolute(path)
 	
 func load_data():
-	PlayerData = ResourceLoader.load(save_file_path).duplicate(true)
+	pass
+	#PlayerData = ResourceLoader.load(save_file_path).duplicate(true)
 	
 #movimentação
 func _handleInput():
