@@ -1577,6 +1577,14 @@ debug_color = Color(0.878431, 0.321569, 0.301961, 0.419608)
 [node name="Player" parent="." instance=ExtResource("3_6iklo")]
 position = Vector2(-845.365, 249.418)
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
+limit_left = -1180
+limit_top = 65
+limit_right = -490
+limit_bottom = 428
+editor_draw_limits = true
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("5_ya31e")
 

@@ -275,12 +275,3 @@ autoplay = "IdleDown"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimationPlayer/Area2D"]
 position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_o34r4")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-2, 1)
-zoom = Vector2(3, 3)
-limit_left = 25
-limit_top = 20
-limit_right = 725
-limit_bottom = 430
-editor_draw_limits = true
