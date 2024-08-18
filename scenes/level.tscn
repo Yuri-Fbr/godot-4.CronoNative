@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://xlptxahs3m02"]
+[gd_scene load_steps=28 format=3 uid="uid://xlptxahs3m02"]
 
 [ext_resource type="Texture2D" uid="uid://sdmk2jd5ssgn" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Plant.png" id="1_6jij7"]
 [ext_resource type="Texture2D" uid="uid://3q8f71tgo84e" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png" id="1_uc1py"]
@@ -1543,6 +1543,15 @@ sources/7 = SubResource("TileSetAtlasSource_3en1k")
 [sub_resource type="CircleShape2D" id="CircleShape2D_r8rle"]
 radius = 47.1698
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mwg2"]
+size = Vector2(709.981, 10.9999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icjl6"]
+size = Vector2(12.9979, 372.862)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ml2hx"]
+size = Vector2(4.99402, 387.989)
+
 [node name="Main_scene" type="TileMap"]
 y_sort_enabled = true
 position = Vector2(1208, -8.00001)
@@ -1568,9 +1577,8 @@ position = Vector2(0.978285, 4.00537)
 script = ExtResource("7_bk1ot")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_2"]
-visible = false
 z_index = 5
-position = Vector2(-563.424, 260.948)
+position = Vector2(-481.463, 268.392)
 shape = SubResource("CircleShape2D_r8rle")
 debug_color = Color(0.878431, 0.321569, 0.301961, 0.419608)
 
@@ -1603,6 +1611,25 @@ position = Vector2(-903, 304)
 
 [node name="baú" parent="." instance=ExtResource("11_lg16c")]
 position = Vector2(-670.498, 274.367)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-840.382, 64.5129)
+shape = SubResource("RectangleShape2D_2mwg2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-845.372, 434.065)
+shape = SubResource("RectangleShape2D_2mwg2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-504.848, 244.802)
+shape = SubResource("RectangleShape2D_icjl6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1182.92, 248.609)
+shape = SubResource("RectangleShape2D_ml2hx")
 
 [connection signal="body_entered" from="Level_2" to="Level_2" method="_on_body_entered"]
 [connection signal="body_exited" from="Level_2" to="Level_2" method="_on_body_exited"]

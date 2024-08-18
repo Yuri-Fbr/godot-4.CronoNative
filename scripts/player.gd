@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @export var speed = 125
 @onready var animations = $AnimationPlayer
+@onready var HurtBox = $CollisionShape2D
 @export_category("Objects")
 
 @export var Inventory: Inventory
