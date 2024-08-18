@@ -1564,7 +1564,7 @@ layer_4/tile_data = PackedInt32Array(1114080, 1048581, 1342177287, 1179616, 1114
 
 [node name="Level_2" type="Area2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-1.06496, 11.9944)
+position = Vector2(0.978285, 4.00537)
 script = ExtResource("7_bk1ot")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_2"]
@@ -1575,10 +1575,7 @@ shape = SubResource("CircleShape2D_r8rle")
 debug_color = Color(0.878431, 0.321569, 0.301961, 0.419608)
 
 [node name="Player" parent="." instance=ExtResource("3_6iklo")]
-position = Vector2(-888, 245)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(3, 3)
+position = Vector2(-845.365, 249.418)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("5_ya31e")

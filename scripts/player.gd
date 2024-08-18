@@ -5,8 +5,8 @@ extends CharacterBody2D
 
 @export var Inventory: Inventory
 var save_file_path = "user://save/"
-
 var contato = false
+
 func _ready():
 	verific_save_directory(save_file_path)
 	
@@ -39,6 +39,7 @@ func _physics_process(_delta):
 	_updateAnimation()
 	move_and_slide()
 	aplly_push_force()
+	
 #força de empurrar o objeto
 func aplly_push_force():
 	for objects in get_slide_collision_count():
