@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://xlptxahs3m02"]
+[gd_scene load_steps=31 format=3 uid="uid://xlptxahs3m02"]
 
 [ext_resource type="Texture2D" uid="uid://sdmk2jd5ssgn" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Plant.png" id="1_6jij7"]
 [ext_resource type="Texture2D" uid="uid://3q8f71tgo84e" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png" id="1_uc1py"]
@@ -14,6 +14,8 @@
 [ext_resource type="Script" path="res://scenes/Next_area.gd" id="7_bk1ot"]
 [ext_resource type="Texture2D" uid="uid://bkgwqpxkn3m6l" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png" id="8_dewwi"]
 [ext_resource type="PackedScene" uid="uid://ggoa7ah1hr6u" path="res://scenes/baú.tscn" id="11_lg16c"]
+[ext_resource type="Script" path="res://invetory/IventoryItem.gd" id="11_o1bp5"]
+[ext_resource type="Script" path="res://invetory/invent.gd" id="12_3vjax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52t5b"]
 texture = ExtResource("1_uc1py")
@@ -1543,6 +1545,10 @@ sources/7 = SubResource("TileSetAtlasSource_3en1k")
 [sub_resource type="CircleShape2D" id="CircleShape2D_r8rle"]
 radius = 47.1698
 
+[sub_resource type="Resource" id="Resource_w65jp"]
+script = ExtResource("12_3vjax")
+item = Array[ExtResource("11_o1bp5")]([null, null, null, null, null])
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mwg2"]
 size = Vector2(709.981, 10.9999)
 
@@ -1584,6 +1590,7 @@ debug_color = Color(0.878431, 0.321569, 0.301961, 0.419608)
 
 [node name="Player" parent="." instance=ExtResource("3_6iklo")]
 position = Vector2(-845.365, 249.418)
+Inventory = SubResource("Resource_w65jp")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
