@@ -67,8 +67,8 @@ grow_vertical = 0
 
 [node name="new_game" type="Button" parent="ButtonsContainer" groups=["button"]]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.384314, 0.384314, 0.384314, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_pe83a")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v2fkv")
@@ -94,8 +94,8 @@ label_settings = SubResource("LabelSettings_4cdy5")
 
 [node name="continue" type="Button" parent="ButtonsContainer" groups=["button"]]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.384314, 0.384314, 0.384314, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_pe83a")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v2fkv")
@@ -123,8 +123,8 @@ label_settings = SubResource("LabelSettings_4cdy5")
 
 [node name="quit" type="Button" parent="ButtonsContainer" groups=["button"]]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.384314, 0.384314, 0.384314, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_pe83a")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v2fkv")

@@ -26,6 +26,3 @@ func _on_button_pressed(_button : Button) -> void:
 			get_tree().quit()
 		
 		
-
-
-
