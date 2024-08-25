@@ -379,7 +379,6 @@ position = Vector2(-5, -24)
 sprite_frames = SubResource("SpriteFrames_mk1pw")
 animation = &"Idle_R"
 autoplay = "Idle_D"
-frame_progress = 0.781464
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-306, -168)
