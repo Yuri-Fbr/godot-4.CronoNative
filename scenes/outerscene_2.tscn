@@ -1763,4 +1763,13 @@ layer_10/name = "collectables"
 layer_10/tile_data = PackedInt32Array(786476, 7, 65536)
 
 [node name="player" parent="." instance=ExtResource("6_jb0yl")]
-position = Vector2(189, 324)
+position = Vector2(229, 313)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(-1179, -4)
+zoom = Vector2(3, 3)
+limit_left = -1180
+limit_top = 160
+limit_right = -490
+limit_bottom = 500
+editor_draw_limits = true
