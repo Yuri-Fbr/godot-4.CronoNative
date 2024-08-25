@@ -1,12 +1,18 @@
 extends CharacterBody2D
-@export var speed = 125
-@onready var animations = $AnimationPlayer
+
+#region References
+@onready var animations = $Animations
 @onready var HurtBox = $CollisionShape2D
 @export_category("Objects")
+#endregion 
 
+#region variables
+@export var speed = 125
 @export var Inventory: Inventory
-var save_file_path = "user://save/"
 var contato = false
+var save_file_path = "user://save/"
+#endregion
+
 
 func _ready():
 	verific_save_directory(save_file_path)

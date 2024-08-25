@@ -20,4 +20,3 @@ func _input(event: InputEvent):
 			Dialogic.start('introdução')
 			get_viewport().set_input_as_handled()
 		
-

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://xlptxahs3m02"]
+[gd_scene load_steps=32 format=3 uid="uid://xlptxahs3m02"]
 
 [ext_resource type="Texture2D" uid="uid://sdmk2jd5ssgn" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Plant.png" id="1_6jij7"]
 [ext_resource type="Texture2D" uid="uid://3q8f71tgo84e" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png" id="1_uc1py"]
@@ -13,7 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://bqt2b1rrfs7p" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Shadow.png" id="7_70ksi"]
 [ext_resource type="Script" path="res://scenes/Next_area.gd" id="7_bk1ot"]
 [ext_resource type="Texture2D" uid="uid://bkgwqpxkn3m6l" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png" id="8_dewwi"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="9_7dvkn"]
 [ext_resource type="PackedScene" uid="uid://ggoa7ah1hr6u" path="res://scenes/baú.tscn" id="11_lg16c"]
+[ext_resource type="Script" path="res://invetory/IventoryItem.gd" id="11_o1bp5"]
+[ext_resource type="Script" path="res://invetory/invent.gd" id="12_3vjax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52t5b"]
 texture = ExtResource("1_uc1py")
@@ -1543,6 +1546,10 @@ sources/7 = SubResource("TileSetAtlasSource_3en1k")
 [sub_resource type="CircleShape2D" id="CircleShape2D_r8rle"]
 radius = 47.1698
 
+[sub_resource type="Resource" id="Resource_w65jp"]
+script = ExtResource("12_3vjax")
+item = Array[ExtResource("11_o1bp5")]([null, null, null, null, null])
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mwg2"]
 size = Vector2(709.981, 10.9999)
 
@@ -1570,6 +1577,7 @@ layer_3/name = "wall"
 layer_3/tile_data = PackedInt32Array(917472, 1769472, 6, 917467, 131072, 6, 983003, 131072, 7, 1048539, 131072, 8, 917468, 196608, 6, 983004, 196608, 7, 1048540, 196608, 8, 917469, 262144, 6, 983005, 262144, 7, 1048541, 262144, 8, 917470, 327680, 6, 983006, 327680, 7, 1048542, 327680, 8, 917471, 983040, 2, 983007, 983040, 3, 1048543, 983040, 4, 983008, 1769472, 7, 1048544, 1769472, 8, 655328, 1376256, 1, 1245152, 1179648, 2, 1310688, 1179648, 3, 1376224, 1179648, 4, 1441760, 1179648, 5, 1507296, 1179648, 2, 1572832, 1179648, 3, 1638368, 1179648, 4, 1703904, 1179648, 5, 1769440, 1179648, 6, 458720, 1376256, 1)
 layer_4/name = "tp"
 layer_4/tile_data = PackedInt32Array(1114080, 1048581, 1342177287, 1179616, 1114117, 1342177287, 1114081, 1376261, 16, 1179617, 1048581, 1342177287, 1114079, 1048581, 1342177287, 1179615, 1114117, 1342177287, 1245153, 1114117, 1342177287)
+script = ExtResource("9_7dvkn")
 
 [node name="Level_2" type="Area2D" parent="."]
 y_sort_enabled = true
@@ -1583,7 +1591,8 @@ shape = SubResource("CircleShape2D_r8rle")
 debug_color = Color(0.878431, 0.321569, 0.301961, 0.419608)
 
 [node name="Player" parent="." instance=ExtResource("3_6iklo")]
-position = Vector2(-845.365, 249.418)
+position = Vector2(-1089.58, 289.094)
+Inventory = SubResource("Resource_w65jp")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
