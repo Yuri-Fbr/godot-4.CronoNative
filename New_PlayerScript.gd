@@ -28,7 +28,10 @@ func _process(delta: float) -> void:
 		velocity = Vector2.RIGHT * speed
 		is_moving = true
 		Direction =  "Right"
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> 52618625c5a49b970de083ea2d9aea22c3390b1d
 	elif Input.is_action_pressed("Up"):
 		velocity = Vector2.UP * speed
 		is_moving = true

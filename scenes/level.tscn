@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=32 format=3 uid="uid://xlptxahs3m02"]
+=======
+[gd_scene load_steps=31 format=3 uid="uid://xlptxahs3m02"]
+>>>>>>> 52618625c5a49b970de083ea2d9aea22c3390b1d
 
 [ext_resource type="Texture2D" uid="uid://sdmk2jd5ssgn" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Plant.png" id="1_6jij7"]
 [ext_resource type="Texture2D" uid="uid://3q8f71tgo84e" path="res://assets/sprites/tilesets/templo/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png" id="1_uc1py"]
@@ -1591,7 +1595,11 @@ shape = SubResource("CircleShape2D_r8rle")
 debug_color = Color(0.878431, 0.321569, 0.301961, 0.419608)
 
 [node name="Player" parent="." instance=ExtResource("3_6iklo")]
+<<<<<<< HEAD
 position = Vector2(-1089.58, 289.094)
+=======
+position = Vector2(-845.365, 249.418)
+>>>>>>> 52618625c5a49b970de083ea2d9aea22c3390b1d
 Inventory = SubResource("Resource_w65jp")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
